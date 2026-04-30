@@ -15,10 +15,10 @@ if "messages" not in st.session_state:
 def load_qa():
     qa_pairs = []
 
-    if not os.path.exists("knowledge/faq.txt"):
+    if not os.path.exists("doc/faq.txt"):
         return qa_pairs
 
-    with open("knowledge/faq.txt", "r", encoding="utf-8") as f:
+    with open("doc/faq.txt", "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     q, a = None, None
@@ -44,8 +44,8 @@ qa_list = load_qa()
 # 保存知识库
 # =========================
 def save_qa(q, a):
-    os.makedirs("knowledge", exist_ok=True)
-    with open("knowledge/faq.txt", "a", encoding="utf-8") as f:
+    os.makedirs("doc", exist_ok=True)
+    with open("doc/faq.txt", "a", encoding="utf-8") as f:
         f.write(f"\nQ: {q}\nA: {a}\n")
 
 # =========================
