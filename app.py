@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 
-st.set_page_config(page_title="智能问答系统")
+st.set_page_config(page_title="智能问答助手")
 
 # =========================
 # 初始化聊天记录
